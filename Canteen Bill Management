@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Enter No. of student and days: "; 
+    int n, m; 
+    cin >> n >> m; 
+    
+    int bill[n][m]; 
+    cout << "Enter bill values:\n"; 
+    for (int i = 0; i < n; i++) { 
+        for (int j = 0; j < m; j++) { 
+            cin >> bill[i][j]; 
+        } 
+    } 
+    
+    int studentTotal[n] = {0}; 
+    int dayTotal[m] = {0}; 
+    
+    for (int i = 0; i < n; i++) { 
+        for (int j = 0; j < m; j++) { 
+            studentTotal[i] += bill[i][j]; 
+            dayTotal[j] += bill[i][j]; 
+        } 
+    } 
+    
+    // Output Logic
+    for (int i = 0; i < n; i++) { 
+        cout << "Student " << i + 1 << " total: Rs" << studentTotal[i] << endl; 
+    } 
+    
+    // ... (Remainder of your provided logic)
+    return 0; 
+}
